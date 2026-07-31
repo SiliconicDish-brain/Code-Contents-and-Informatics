@@ -1,0 +1,319 @@
+Using device: cpu
+
+============================================================
+  LOADING MNIST
+============================================================
+Search phase:  3000 train / 1000 val
+Final phase:   10000 train / 2000 test
+
+============================================================
+  DEFINING HYPERPARAMETER SEARCH SPACE
+============================================================
+Total reservoir configurations to evaluate: 15
+Each tested with Linear + MLP readout = 30 evaluations
+
+============================================================
+  PHASE 1: HYPERPARAMETER SEARCH
+============================================================
+
+--- Config 1/15: HP1-LargeRecurrent ---
+    n=1500, conn_in=0.15, conn_rec=0.1, decay=0.9, thresh=2.0, T=100, scale=0.5, norm=True
+    Train:  1000/3000  (39 s/s, ETA 52s)
+    Train:  2000/3000  (38 s/s, ETA 26s)
+    Train:  3000/3000  (38 s/s, ETA 0s)
+    Val  :  1000/1000  (39 s/s, ETA 0s)
+    Avg spikes/neuron: 10.97  (feat extract: 104.9s)
+    Linear: 88.7% | MLP: 90.8% | Best: 90.8% (MLP)
+
+--- Config 2/15: HP2-DenseLarge ---
+    n=1000, conn_in=0.3, conn_rec=0.0, decay=0.85, thresh=2.0, T=75, scale=0.5, norm=True
+    Train:  1000/3000  (160 s/s, ETA 13s)
+    Train:  2000/3000  (163 s/s, ETA 6s)
+    Train:  3000/3000  (163 s/s, ETA 0s)
+    Val  :  1000/1000  (163 s/s, ETA 0s)
+    Avg spikes/neuron: 11.14  (feat extract: 24.5s)
+    Linear: 88.9% | MLP: 90.9% | Best: 90.9% (MLP)
+
+--- Config 3/15: HP3-HighRecurrence ---
+    n=750, conn_in=0.15, conn_rec=0.15, decay=0.9, thresh=1.5, T=100, scale=0.5, norm=True
+    Train:  1000/3000  (98 s/s, ETA 20s)
+    Train:  2000/3000  (72 s/s, ETA 14s)
+    Train:  3000/3000  (52 s/s, ETA 0s)
+    Val  :  1000/1000  (36 s/s, ETA 0s)
+    Avg spikes/neuron: 16.34  (feat extract: 85.7s)
+    Linear: 87.0% | MLP: 90.4% | Best: 90.4% (MLP)
+
+--- Config 4/15: HP4-VeryLargeSparse ---
+    n=1500, conn_in=0.1, conn_rec=0.05, decay=0.95, thresh=3.0, T=100, scale=0.3, norm=True
+    Train:  1000/3000  (23 s/s, ETA 87s)
+    Train:  2000/3000  (29 s/s, ETA 34s)
+    Train:  3000/3000  (26 s/s, ETA 0s)
+    Val  :  1000/1000  (38 s/s, ETA 0s)
+    Avg spikes/neuron: 2.48  (feat extract: 139.8s)
+    Linear: 88.5% | MLP: 88.4% | Best: 88.5% (Linear)
+
+--- Config 5/15: HP5-BaselineImproved ---
+    n=500, conn_in=0.2, conn_rec=0.1, decay=0.9, thresh=2.0, T=100, scale=0.5, norm=True
+    Train:  1000/3000  (124 s/s, ETA 16s)
+    Train:  2000/3000  (126 s/s, ETA 8s)
+    Train:  3000/3000  (113 s/s, ETA 0s)
+    Val  :  1000/1000  (131 s/s, ETA 0s)
+    Avg spikes/neuron: 13.26  (feat extract: 34.3s)
+    Linear: 89.6% | MLP: 91.0% | Best: 91.0% (MLP)
+
+--- Config 6/15: Rand-1 ---
+    n=500, conn_in=0.1, conn_rec=0.05, decay=0.8, thresh=1.0, T=50, scale=0.3, norm=True
+    Train:  1000/3000  (259 s/s, ETA 8s)
+    Train:  2000/3000  (251 s/s, ETA 4s)
+    Train:  3000/3000  (250 s/s, ETA 0s)
+    Val  :  1000/1000  (233 s/s, ETA 0s)
+    Avg spikes/neuron: 3.24  (feat extract: 16.3s)
+    Linear: 85.3% | MLP: 87.0% | Best: 87.0% (MLP)
+
+--- Config 7/15: Rand-2 ---
+    n=1500, conn_in=0.25, conn_rec=0.0, decay=0.75, thresh=0.5, T=50, scale=0.5, norm=True
+    Train:  1000/3000  (186 s/s, ETA 11s)
+    Train:  2000/3000  (183 s/s, ETA 5s)
+    Train:  3000/3000  (173 s/s, ETA 0s)
+    Val  :  1000/1000  (168 s/s, ETA 0s)
+    Avg spikes/neuron: 29.89  (feat extract: 23.3s)
+    Linear: 85.3% | MLP: 87.3% | Best: 87.3% (MLP)
+
+--- Config 8/15: Rand-3 ---
+    n=1500, conn_in=0.15, conn_rec=0.15, decay=0.9, thresh=1.0, T=75, scale=0.7, norm=True
+    Train:  1000/3000  (37 s/s, ETA 54s)
+    Train:  2000/3000  (41 s/s, ETA 25s)
+    Train:  3000/3000  (43 s/s, ETA 0s)
+    Val  :  1000/1000  (49 s/s, ETA 0s)
+    Avg spikes/neuron: 25.29  (feat extract: 90.8s)
+    Linear: 88.9% | MLP: 89.9% | Best: 89.9% (MLP)
+
+--- Config 9/15: Rand-4 ---
+    n=750, conn_in=0.25, conn_rec=0.05, decay=0.85, thresh=1.0, T=50, scale=0.7, norm=True
+    Train:  1000/3000  (185 s/s, ETA 11s)
+    Train:  2000/3000  (184 s/s, ETA 5s)
+    Train:  3000/3000  (185 s/s, ETA 0s)
+    Val  :  1000/1000  (185 s/s, ETA 0s)
+    Avg spikes/neuron: 21.42  (feat extract: 21.6s)
+    Linear: 89.0% | MLP: 88.5% | Best: 89.0% (Linear)
+
+--- Config 10/15: Rand-5 ---
+    n=500, conn_in=0.25, conn_rec=0.0, decay=0.85, thresh=1.5, T=100, scale=0.7, norm=True
+    Train:  1000/3000  (176 s/s, ETA 11s)
+    Train:  2000/3000  (175 s/s, ETA 6s)
+    Train:  3000/3000  (172 s/s, ETA 0s)
+    Val  :  1000/1000  (160 s/s, ETA 0s)
+    Avg spikes/neuron: 29.72  (feat extract: 23.7s)
+    Linear: 89.7% | MLP: 90.8% | Best: 90.8% (MLP)
+
+--- Config 11/15: Rand-6 ---
+    n=1250, conn_in=0.3, conn_rec=0.0, decay=0.9, thresh=0.5, T=100, scale=0.7, norm=False
+    Train:  1000/3000  (109 s/s, ETA 18s)
+    Train:  2000/3000  (111 s/s, ETA 9s)
+    Train:  3000/3000  (112 s/s, ETA 0s)
+    Val  :  1000/1000  (114 s/s, ETA 0s)
+    Avg spikes/neuron: 84.09  (feat extract: 35.6s)
+    Linear: 61.6% | MLP: 10.5% | Best: 61.6% (Linear)
+
+--- Config 12/15: Rand-7 ---
+    n=1500, conn_in=0.15, conn_rec=0.0, decay=0.75, thresh=5.0, T=50, scale=0.7, norm=True
+    Train:  1000/3000  (217 s/s, ETA 9s)
+    Train:  2000/3000  (214 s/s, ETA 5s)
+    Train:  3000/3000  (213 s/s, ETA 0s)
+    Val  :  1000/1000  (216 s/s, ETA 0s)
+    Avg spikes/neuron: 0.01  (feat extract: 18.7s)
+    Linear: 21.7% | MLP: 22.3% | Best: 22.3% (MLP)
+
+--- Config 13/15: Rand-8 ---
+    n=750, conn_in=0.1, conn_rec=0.1, decay=0.85, thresh=2.0, T=100, scale=0.7, norm=True
+    Train:  1000/3000  (105 s/s, ETA 19s)
+    Train:  2000/3000  (103 s/s, ETA 10s)
+    Train:  3000/3000  (103 s/s, ETA 0s)
+    Val  :  1000/1000  (86 s/s, ETA 0s)
+    Avg spikes/neuron: 10.65  (feat extract: 40.9s)
+    Linear: 88.2% | MLP: 91.8% | Best: 91.8% (MLP)
+
+--- Config 14/15: Rand-9 ---
+    n=1000, conn_in=0.2, conn_rec=0.0, decay=0.85, thresh=5.0, T=100, scale=0.3, norm=True
+    Train:  1000/3000  (106 s/s, ETA 19s)
+    Train:  2000/3000  (115 s/s, ETA 9s)
+    Train:  3000/3000  (119 s/s, ETA 0s)
+    Val  :  1000/1000  (129 s/s, ETA 0s)
+    Avg spikes/neuron: 0.00  (feat extract: 33.0s)
+    SKIP — reservoir is silent
+
+--- Config 15/15: Rand-10 ---
+    n=1500, conn_in=0.15, conn_rec=0.0, decay=0.9, thresh=2.0, T=75, scale=0.5, norm=False
+    Train:  1000/3000  (138 s/s, ETA 15s)
+    Train:  2000/3000  (135 s/s, ETA 7s)
+    Train:  3000/3000  (108 s/s, ETA 0s)
+    Val  :  1000/1000  (61 s/s, ETA 0s)
+    Avg spikes/neuron: 8.09  (feat extract: 44.0s)
+    Linear: 83.3% | MLP: 82.9% | Best: 83.3% (Linear)
+
+============================================================
+  SEARCH RESULTS (sorted by best accuracy)
+============================================================
+
+  Rank Tag                        N   CIn  CRec   Dec   Thr    T  Scl  Nrm  Linear     MLP    Best
+  --------------------------------------------------------------------------------------------------------------
+     1 Rand-8                   750  0.10  0.10  0.85   2.0  100  0.7    Y   88.2%   91.8%   91.8%
+     2 HP5-BaselineImproved     500  0.20  0.10  0.90   2.0  100  0.5    Y   89.6%   91.0%   91.0%
+     3 HP2-DenseLarge          1000  0.30  0.00  0.85   2.0   75  0.5    Y   88.9%   90.9%   90.9%
+     4 HP1-LargeRecurrent      1500  0.15  0.10  0.90   2.0  100  0.5    Y   88.7%   90.8%   90.8%
+     5 Rand-5                   500  0.25  0.00  0.85   1.5  100  0.7    Y   89.7%   90.8%   90.8%
+     6 HP3-HighRecurrence       750  0.15  0.15  0.90   1.5  100  0.5    Y   87.0%   90.4%   90.4%
+     7 Rand-3                  1500  0.15  0.15  0.90   1.0   75  0.7    Y   88.9%   89.9%   89.9%
+     8 Rand-4                   750  0.25  0.05  0.85   1.0   50  0.7    Y   89.0%   88.5%   89.0%
+     9 HP4-VeryLargeSparse     1500  0.10  0.05  0.95   3.0  100  0.3    Y   88.5%   88.4%   88.5%
+    10 Rand-2                  1500  0.25  0.00  0.75   0.5   50  0.5    Y   85.3%   87.3%   87.3%
+    11 Rand-1                   500  0.10  0.05  0.80   1.0   50  0.3    Y   85.3%   87.0%   87.0%
+    12 Rand-10                 1500  0.15  0.00  0.90   2.0   75  0.5    N   83.3%   82.9%   83.3%
+    13 Rand-6                  1250  0.30  0.00  0.90   0.5  100  0.7    N   61.6%   10.5%   61.6%
+    14 Rand-7                  1500  0.15  0.00  0.75   5.0   50  0.7    Y   21.7%   22.3%   22.3%
+    15 Rand-9                  1000  0.20  0.00  0.85   5.0  100  0.3    Y    0.0%    0.0%    0.0%
+
+Search completed in 785s
+
+Best config: Rand-8 -> 91.8% (MLP readout)
+
+--- Hyperparameter Impact (avg best_acc by value) ---
+  n_reservoir:
+         500 → 89.6% (n=3)
+         750 → 90.4% (n=3)
+        1000 → 45.4% (n=2)
+        1250 → 61.6% (n=1)
+        1500 → 77.0% (n=6)
+  conn_rec:
+         0.0 → 62.3% (n=7)
+        0.05 → 88.2% (n=3)
+         0.1 → 91.2% (n=3)
+        0.15 → 90.1% (n=2)
+  decay:
+        0.75 → 54.8% (n=2)
+         0.8 → 87.0% (n=1)
+        0.85 → 72.5% (n=5)
+         0.9 → 84.5% (n=6)
+        0.95 → 88.5% (n=1)
+  thresh:
+         0.5 → 74.5% (n=2)
+         1.0 → 88.6% (n=3)
+         1.5 → 90.6% (n=2)
+         2.0 → 89.6% (n=5)
+         3.0 → 88.5% (n=1)
+         5.0 → 11.2% (n=2)
+  sim_time:
+          50 → 71.4% (n=4)
+          75 → 88.0% (n=3)
+         100 → 75.6% (n=8)
+  input_scale:
+         0.3 → 58.5% (n=3)
+         0.5 → 89.0% (n=6)
+         0.7 → 74.2% (n=6)
+  normalize:
+       False → 72.5% (n=2)
+        True → 77.7% (n=13)
+
+============================================================
+  PHASE 2: FINAL EVALUATION (best config on 10000 train / 2000 test)
+============================================================
+Reservoir: 784 → 750 LIF neurons
+  Input synapses:     59,087 (10%)
+  Recurrent synapses: 56,667 (10%)
+  LIF: decay=0.85, thresh=2.0
+  Sim time: 100, input scale: 0.7
+    Train:  1000/10000  (100 s/s, ETA 90s)
+    Train:  2000/10000  (99 s/s, ETA 81s)
+    Train:  3000/10000  (99 s/s, ETA 71s)
+    Train:  4000/10000  (99 s/s, ETA 60s)
+    Train:  5000/10000  (99 s/s, ETA 51s)
+    Train:  6000/10000  (99 s/s, ETA 40s)
+    Train:  7000/10000  (100 s/s, ETA 30s)
+    Train:  8000/10000  (100 s/s, ETA 20s)
+    Train:  9000/10000  (85 s/s, ETA 12s)
+    Train: 10000/10000  (74 s/s, ETA 0s)
+    Test :  1000/2000  (78 s/s, ETA 13s)
+    Test :  2000/2000  (49 s/s, ETA 0s)
+Feature extraction: 176.4s
+
+  SNN Final Accuracy: 92.2%
+
+============================================================
+  TRAINING ANN BASELINE (20 epochs, 750 hidden)
+============================================================
+  Epoch   5/20 | Loss: 0.0927 | Acc: 97.3%
+  Epoch  10/20 | Loss: 0.0266 | Acc: 99.5%
+  Epoch  15/20 | Loss: 0.0104 | Acc: 99.8%
+  Epoch  20/20 | Loss: 0.0050 | Acc: 99.9%
+ANN training: 33.8s
+
+============================================================
+  FINAL COMPARISON
+============================================================
+
+  +---------------------------------------------------+
+  |  ORIGINAL SNN (73.1%)  →  TUNED SNN:  92.2%       |
+  |  ANN Baseline:                        95.2%       |
+  +---------------------------------------------------+
+  |  Improvement: +19.1% from hyperparameter tuning  |
+  +---------------------------------------------------+
+  |  Energy — SNN: 456.3 nJ  |  ANN: 2739.3 nJ     |
+  |  SNN is ~6.0x more energy-efficient          |
+  +---------------------------------------------------+
+
+  Best config details:
+    n_reservoir: 750
+    conn_in: 0.1
+    conn_rec: 0.1
+    decay: 0.85
+    thresh: 2.0
+    sim_time: 100
+    input_scale: 0.7
+    normalize: True
+    readout: MLP
+
+  Per-digit accuracy:
+  Digit      SNN      ANN      Gap
+    ---      ---      ---      ---
+      0    98.3%    98.3%    +0.0%
+      1    98.7%    98.3%    +0.4%
+      2    87.7%    95.4%    -7.8%
+      3    89.4%    95.7%    -6.3%
+      4    93.1%    95.9%    -2.8%
+      5    95.5%    95.0%    +0.6%
+      6    94.4%    96.1%    -1.7%
+      7    91.7%    90.2%    +1.5%
+      8    91.1%    93.2%    -2.1%
+      9    82.0%    93.8%   -11.9%
+
+============================================================
+  GENERATING VISUALIZATIONS
+============================================================
+  Saved: d:\Research\Final\mnist_revamped_comparison.pdf
+  Saved: d:\Research\Final\mnist_revamped_rasters.pdf
+
+============================================================
+  FINAL SUMMARY
+============================================================
+
+  Original SNN accuracy:    73.1%
+  Tuned SNN accuracy:       92.2%  (+19.1%)
+  ANN baseline accuracy:    95.2%
+  Accuracy gap (SNN vs ANN): 3.0%
+
+  Best hyperparameters:
+    Reservoir neurons:  750
+    Input connectivity: 0.1
+    Recurrent connect.: 0.1
+    LIF decay:          0.85
+    LIF threshold:      2.0
+    Simulation time:    100
+    Input scale:        0.7
+    Normalize features: True
+    Readout type:       MLP
+
+  Energy efficiency:
+    SNN: 456.3 nJ/sample  |  ANN: 2739.3 nJ/sample
+    SNN is ~6.0x more efficient
+
+  Total search time: 785s (13.1 min)
